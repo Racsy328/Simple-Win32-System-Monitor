@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{83480bd8-2b50-43a6-b4fc-da1952da647b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bin">
+      <UniqueIdentifier>{46dc3b97-1e29-4f76-8d75-65de0fa8d972}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="docs">
+      <UniqueIdentifier>{c77cc354-22fd-4829-9c14-8b99ce3e0e31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{f1552350-9c2b-4f76-9d93-e246249a1388}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Monitor.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Monitor.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".github\README.md" />
+    <None Include=".github\.gitignore" />
+    <None Include="F:\桌面\Github_Example Program.exe">
+      <Filter>bin</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\txt_simple.txt">
+      <Filter>bin</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="docs\PRT SC SYSRQ.png">
+      <Filter>docs</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
