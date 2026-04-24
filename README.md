@@ -1,4 +1,3 @@
-# .github
 # Win32-System-Monitor
 一个基于 C++ 和 Win32 API 开发的轻量级系统实时监控工具。
 
