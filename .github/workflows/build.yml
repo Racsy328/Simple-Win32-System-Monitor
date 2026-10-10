@@ -1,0 +1,56 @@
+name: build
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  # Primary cross-platform-style build: CMake drives configure, build and tests.
+  cmake:
+    name: CMake (${{ matrix.config }})
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        config: [Debug, Release]
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Configure
+        run: cmake -S . -B build -A x64
+
+      - name: Build
+        run: cmake --build build --config ${{ matrix.config }} --parallel
+
+      - name: Run unit tests
+        run: ctest --test-dir build -C ${{ matrix.config }} --output-on-failure
+
+  # Second build path: the checked-in Visual Studio solution must stay valid.
+  msbuild:
+    name: MSBuild (${{ matrix.platform }})
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [x64, x86]
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Add MSBuild to PATH
+        uses: microsoft/setup-msbuild@v3
+
+      - name: Build solution
+        run: msbuild SystemMonitor.sln /p:Configuration=Release /p:Platform=${{ matrix.platform }} /m /v:minimal
+
+      - name: Run unit tests
+        shell: bash
+        # The solution platform is x86 while the project platform is Win32,
+        # which is also what the output directory is named after.
+        run: |
+          if [ "${{ matrix.platform }}" = "x86" ]; then outdir=Win32; else outdir=x64; fi
+          ./bin/$outdir/Release/SystemMonitorTests.exe

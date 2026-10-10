@@ -1,0 +1,27 @@
+root = true
+
+[*]
+charset = utf-8-bom
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+# Documentation, CI and CMake are stored as plain UTF-8 with LF so that they
+# render and diff identically on every platform.
+[*.{md,markdown,yml,yaml,json}]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+
+[CMakeLists.txt]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+
+[*.{sln,vcxproj,filters,props,targets}]
+end_of_line = crlf
+
+[*.{png,jpg,jpeg,gif,ico}]
+insert_final_newline = false
