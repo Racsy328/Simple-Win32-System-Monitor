@@ -58,6 +58,8 @@ skeleton into a complete system monitor.
 - `src/txt_simple.txt`, an empty leftover file.
 - A hard-coded `F:\...` executable path and two stale file references in the
   project file, which broke the build for anyone else cloning the repository.
+- The bundled screenshot, which still showed the pre-2.0 user interface and no
+  longer matched what the program prints.
 
 [Unreleased]: https://github.com/Racsy328/Simple-Win32-System-Monitor/compare/v2.0.0...HEAD
 [2.0.0]: https://github.com/Racsy328/Simple-Win32-System-Monitor/releases/tag/v2.0.0

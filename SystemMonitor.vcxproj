@@ -26,9 +26,6 @@
     <ClCompile Include="src\Monitor.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="docs\PRT SC SYSRQ.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="CMakeLists.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

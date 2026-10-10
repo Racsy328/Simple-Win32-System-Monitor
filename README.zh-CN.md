@@ -20,10 +20,6 @@
 - **两种输出** —— 自动刷新的控制台实时视图，或每次采样输出一个 JSON 对象（便于脚本消费）
 - **优雅退出** —— 响应 Ctrl+C，正常收尾
 
-## 运行截图
-
-![SystemMonitor 实时视图](docs/PRT%20SC%20SYSRQ.png)
-
 ## 环境要求
 
 - Windows 10 或 Windows 11（x64 / x86）
@@ -132,7 +128,6 @@ include/Monitor.h        对外接口：SystemInfo、MemoryStatus、DiskStatus�
 src/Monitor.cpp          平台查询的具体实现
 src/main.cpp             命令行入口（参数解析、输出渲染）
 tests/test_monitor.cpp   单元测试
-docs/                    截图等文档素材
 CMakeLists.txt           CMake 构建
 SystemMonitor.sln        Visual Studio 解决方案（程序 + 测试）
 ```

@@ -25,10 +25,6 @@ No third-party libraries, no WMI, no COM — just the SDK.
   object per sample for scripting and dashboards.
 - **Clean shutdown** — Ctrl+C is handled and exits gracefully.
 
-## Screenshot
-
-![SystemMonitor live view](docs/PRT%20SC%20SYSRQ.png)
-
 ## Requirements
 
 - Windows 10 or Windows 11 (x64 or x86)
@@ -142,7 +138,6 @@ include/Monitor.h        Public API: SystemInfo, MemoryStatus, DiskStatus, CpuSa
 src/Monitor.cpp          Implementations of the platform queries
 src/main.cpp             Command line front end (argument parsing, rendering)
 tests/test_monitor.cpp   Unit tests
-docs/                    Screenshots and other documentation assets
 CMakeLists.txt           CMake build
 SystemMonitor.sln        Visual Studio solution (app + tests)
 ```

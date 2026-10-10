@@ -9,9 +9,6 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx</Extensions>
     </Filter>
-    <Filter Include="Docs">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Monitor.h">
@@ -25,10 +22,5 @@
     <ClCompile Include="src\Monitor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="docs\PRT SC SYSRQ.png">
-      <Filter>Docs</Filter>
-    </Image>
   </ItemGroup>
 </Project>
